@@ -1,24 +1,28 @@
-# README
+# Fetch Test README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Rails application that calculates points based on a receipt.
 
-Things you may want to cover:
+The salient parts of the application are:
 
-* Ruby version
+* `app/services/point_counter.rb` - This is the main class that calculates the points based on the receipt.
+* `app/controllers/receipts_controller.rb` - This is the controller that handles the API requests.
+* `spec/controllers/receipts_controller_spec.rb` - This is the spec file for the controller.
 
-* System dependencies
+The Receipt model and the ReceiptStore are used to store and retrieve the receipts.  Both are found in the `app/data` directory.
 
-* Configuration
+The `ReceiptStore` is a simple in-memory store that is used to store the receipts.  It is not persisted to a database.
 
-* Database creation
+The `Receipt` model is a simple data structure that represents a receipt.  It is used to store the receipt data.
 
-* Database initialization
+The `PointCounter` is a class that calculates the points based on the receipt.  It is used to calculate the points based on the receipt.
 
-* How to run the test suite
+It utilizes a simple rule-based system to calculate the points.  The rules are defined in the `app/services` directory.
 
-* Services (job queues, cache servers, search engines, etc.)
+Tests are found in the `spec` directory.  The `spec/controllers/receipts_controller_spec.rb` file is the main spec file for the controller.
 
-* Deployment instructions
+The tests are run using the `rspec` command.
 
-* ...
+Future improvements:
+
+* Add a database to store the receipts.
+* Add field level validation to the Receipt model.
